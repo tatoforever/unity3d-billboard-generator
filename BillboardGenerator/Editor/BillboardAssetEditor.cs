@@ -1,7 +1,5 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using System.Collections.Generic;
 
 namespace Ardenfall.Utilities
 {

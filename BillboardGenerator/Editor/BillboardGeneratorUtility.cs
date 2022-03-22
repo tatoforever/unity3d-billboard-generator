@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
+//using UnityEngine.Rendering.Universal;
 
 namespace Ardenfall.Utilities
 {
@@ -334,13 +334,14 @@ namespace Ardenfall.Utilities
             camera.orthographic = true;
             camera.allowMSAA = false;
 
-            var additionalData = camera.GetComponent<UniversalAdditionalCameraData>();
-            if (additionalData == null)
-                additionalData = camera.gameObject.AddComponent<UniversalAdditionalCameraData>();
-
-            additionalData.antialiasing = AntialiasingMode.None;
-            additionalData.renderPostProcessing = false;
-            additionalData.renderShadows = false;
+            // Universal only
+            // var additionalData = camera.GetComponent<UniversalAdditionalCameraData>();
+            // if (additionalData == null)
+            //     additionalData = camera.gameObject.AddComponent<UniversalAdditionalCameraData>();
+            //
+            // additionalData.antialiasing = AntialiasingMode.None;
+            // additionalData.renderPostProcessing = false;
+            // additionalData.renderShadows = false;
 
             return camera;
         }
